@@ -215,13 +215,13 @@ function update(time = 0){
 
 const colors = [
   null,
-  "red",
-  "blue",
-  "yellow",
-  "green",
-  "purple",
-  "orange",
-  "aqua",
+  "#FF0D72",
+  "#0DC2FF",
+  "#ODFF72",
+  "#F538FF",
+  "#FF8E0D",
+  "#FFE138",
+  "#3877FF",
 ]
 
 
