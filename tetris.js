@@ -5,11 +5,6 @@ context.scale(20,20);
 
 
 
-const matrix = [
-  [0,0,0],
-  [1,1,1],
-  [0,1,0],
-];
 
 
 function collide(arena, player) {
@@ -34,6 +29,17 @@ function createMatrix(w,h) {
     matrix.push(new Array(w).fill(0))
     }
     return matrix;
+}
+
+
+function createPiece(type) {
+  if (type === "T") {
+    return   [
+      [0,0,0],
+      [1,1,1],
+      [0,1,0],
+    ];
+  }
 }
 
 
@@ -160,7 +166,7 @@ const arena = createMatrix(12,20);
 
 const player = {
   pos: {x: 5, y: 5},
-  matrix: matrix,
+  matrix: createPiece("T"),
 }
 
 
