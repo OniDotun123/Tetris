@@ -13,6 +13,7 @@ const matrix = [
   [0,1,0],
 ];
 
+function drawMatrix(matrix, offset) {
 matrix.forEach((row,y) => {
   row.forEach((value,x) => {
     if (value !== 0) {
@@ -22,3 +23,7 @@ matrix.forEach((row,y) => {
   });
 
 });
+
+}
+
+drawMatrix(matrix);
