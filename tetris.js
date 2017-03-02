@@ -37,7 +37,8 @@ matrix.forEach((row,y) => {
 
 }
 
-function update() {
+function update(time = 0) {
+  console.log(time)
   draw();
   requestAnimationFrame(update);
 }
