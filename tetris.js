@@ -42,7 +42,7 @@ function createMatrix(w,h) {
 
 function draw() {
   context.fillStyle = "#000";
-  context.fillRect(0,0,canvas.width, canvas.height);
+  context.fillRect( 0, 0, canvas.width, canvas.height);
   drawMatrix(arena,{x: 0, y: 0});
   drawMatrix(player.matrix, player.pos);
 }
@@ -130,19 +130,18 @@ let dropInterval = 1000;
 
 
 let lastTime = 0;
-function update(time = 0) {
+function update(time = 0){
   const deltaTime = time - lastTime;
   lastTime = time;
 
   dropCounter += deltaTime;
   if (dropCounter > dropInterval) {
-    player.pos.y++;
-    dropCounter = 0;
+    playerDrop();
   }
 
   draw();
   requestAnimationFrame(update);
-}
+};
 
 const arena = createMatrix(12,20);
 
