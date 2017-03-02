@@ -18,7 +18,9 @@ matrix.forEach((row,y) => {
   row.forEach((value,x) => {
     if (value !== 0) {
       context.fillStyle = "red";
-      context.fillRect(x,y,1,1);
+      context.fillRect(x + offset.x,
+                        y + offset.y,
+                                1,1);
     }
   });
 
@@ -26,4 +28,9 @@ matrix.forEach((row,y) => {
 
 }
 
-drawMatrix(matrix);
+const player = {
+  pos: {x: 5, y: 5},
+  matrix: matrix
+}
+
+drawMatrix(player.matrix, player.pos);
