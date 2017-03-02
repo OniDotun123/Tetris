@@ -37,8 +37,13 @@ matrix.forEach((row,y) => {
 
 }
 
+
+
+let lastTime = 0;
 function update(time = 0) {
-  console.log(time)
+  const deltaTime = time - lastTime;
+  lastTime = time
+  console.log(deltaTime)
   draw();
   requestAnimationFrame(update);
 }
